@@ -95,6 +95,7 @@ input {
   border-radius: 100px;
   border: 1px solid #1274b5;
   outline: none;
+  max-height: 56px;
 }
 input::placeholder{
   color: #1274b598;
@@ -229,6 +230,7 @@ form.invalid input{
   input{
     font-size: 14px;
     padding: 17px 24px;
+    max-height: 51px;
   }
   button{
     width: 64px;
