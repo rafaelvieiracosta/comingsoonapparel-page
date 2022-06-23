@@ -127,8 +127,36 @@ button::after {
   margin: 0 auto;
 }
 
-.error {
+.error{
   display: none;
+  font-size: 14px;
+  letter-spacing: -0.035em;
+  color: #F96464;
+  margin-top: 10px;
+  padding-left: 30px;
+}
+
+form.invalid .error {
+  display: block;
+}
+
+form.invalid::after{
+  content: '';
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background-image: url('./img/icon-error.svg');
+  right: 116px;
+  top: 16px;
+}
+
+form.invalid input{
+  border: 2px solid #F96464;
+  padding: 18px 30px;
+}
+
+.error{
+  position: absolute
 }
 
 @media (min-height: 801px) {
@@ -205,6 +233,13 @@ button::after {
   button{
     width: 64px;
     height: 50px;
+  }
+  form.invalid input{
+    padding: 16px 30px;
+  }
+  form.invalid::after{
+    right: 80px;
+    top: 13px;
   }
 }
 @media(max-width: 500px){
